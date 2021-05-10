@@ -1,0 +1,41 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Car</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/style.css}"/>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}"/>
+
+    <script th:src="@{/webjars/jquery/3.5.1/jquery.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+</head>
+
+
+<body>
+<div class="container">
+    <h1>Car Management System</h1>
+    <hr>
+    <br>
+
+    <table class="table table-bordered" width="100%" id="dataTable" cellspacing="0">
+        <thead>
+        <tr>
+            <th>Mark</th>
+            <th>Model</th>
+            <th>Color</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td th:text="${car.mark}"></td>
+            <td th:text="${car.model}"></td>
+            <td th:text="${car.color}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    <hr>
+    <a th:href="@{/cars}"> Back to Car List</a>
+</div>
+</body>
